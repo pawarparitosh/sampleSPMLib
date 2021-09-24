@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-class Utils {
+public class CommonUtils {
     
     static let hapticFeedback = UIImpactFeedbackGenerator(style: .heavy)
     
