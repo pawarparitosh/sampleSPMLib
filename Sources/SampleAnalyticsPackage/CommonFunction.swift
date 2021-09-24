@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct commonStructExample {
-    static func commonStructExampleFetchBuildVersion() -> String {
+public struct commonStructExample {
+   public static func commonStructExampleFetchBuildVersion() -> String {
         if let buildversion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             return buildversion
         }

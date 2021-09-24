@@ -32,14 +32,14 @@ public class CommonUtils {
         return userDefaults.bool(forKey: key)
     }
     
-    static func fetchBuildVersion() -> String {
+    public func fetchBuildVersion() -> String {
         if let buildversion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             return buildversion
         }
         return ""
     }
     
-    static func getAppBuildNo() -> String? {
+   public static func getAppBuildNo() -> String? {
         guard let build: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String else {
             return nil
         }
