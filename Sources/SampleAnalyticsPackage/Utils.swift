@@ -8,8 +8,21 @@
 import Foundation
 import SwiftUI
 import UIKit
+import Heap
 
 public class CommonUtils {
+    
+    // MARK:- Heap Event Methods.
+    
+    /// Method will add an event property to an event.
+    /// - Parameters:
+    ///   - eventProperties: Dictionary of event properties with key as String and value as Any.
+    public static func logEventProperties(eventProperties : [String : Any]?) {
+        // Check for nil value.
+        guard let eventProperties = eventProperties else { return }
+        // Add event properties.
+        Heap.addEventProperties(eventProperties)
+    }
     
     static let hapticFeedback = UIImpactFeedbackGenerator(style: .heavy)
     
